@@ -16,7 +16,7 @@ artifacts:
     - appspec.yml
     - scripts/**
     - any-meal-certs.jks
-    - any-meal-key-sotre.jks
+    - any-meal-key-store.jks
   discard-paths: yes
 cache:
   paths:
