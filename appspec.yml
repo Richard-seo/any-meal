@@ -2,10 +2,16 @@ version: 0.0
 os: linux
 files:
   - source:  /
-    destination: /usr/app/apache-tomcat-8.5.69/any-meal
+    destination: /home/ec2-user/build/
 
 permissions:
   - object: /
     pattern: "**"
     owner: ec2-user
     group: ec2-user
+
+hooks:
+  ApplicationStart:
+    - location: deploy.sh
+      timeout: 60
+      runas: ec2-user
