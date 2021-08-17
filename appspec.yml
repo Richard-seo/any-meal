@@ -1,13 +1,11 @@
----
-files:
-  -
-    destination: /usr/app/apache-tomcat-8.5.69/any-meal
-    permission:
-      -
-        group: ec2-user
-        object: /
-        owner: ec2-user
-        pattern: "**"
-    source: /
-os: linux
 version: 0.0
+os: linux
+files:
+  - source:  /
+    destination: /usr/app/apache-tomcat-8.5.69/any-meal
+
+permissions:
+  - object: /
+    pattern: "**"
+    owner: ec2-user
+    group: ec2-user
